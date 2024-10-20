@@ -1,16 +1,10 @@
 # Automatic Number Plate Recognition using YOLOv11
 
 - [Automatic Number Plate Recognition using YOLOv11](#automatic-number-plate-recognition-using-yolov11)
-  - [Demo](#demo)
   - [Data](#data)
   - [Model](#model)
   - [Dependencies](#dependencies)
   - [Project Setup](#project-setup)
-
-## Demo
-
-https://github.com/bhaskrr/number-plate-recognition-using-yolov11/blob/main/data/output/annotated_traffic.mp4
-
 
 ## Data
 

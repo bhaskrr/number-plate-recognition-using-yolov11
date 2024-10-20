@@ -7,10 +7,10 @@ license_plate_detector = YOLO("./models/license_plate_detector.pt")
 # Load video
 cap = cv2.VideoCapture("./data/input/traffic.mp4")
 
-# Get video details (width, height, frames per second)
+# Get frame width, height, and FPS
 frame_width = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
 frame_height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
-fps = cap.get(cv2.CAP_PROP_FPS)
+fps = int(cap.get(cv2.CAP_PROP_FPS))
 
 # Define codec and create VideoWriter object to save the video
 output_path = "./data/output/annotated_traffic.mp4"
@@ -37,20 +37,20 @@ while ret:
                 x2 = int(x2)
                 y2 = int(y2)
                 
-                # Draw rectangle around detected license plates
+                # Draw rectangle
                 cv2.rectangle(frame, (x1, y1), (x2, y2), (0, 255, 0), 2)
 
-        # Write the annotated frame to the output video file
+        # Write the frame to the output video
         out.write(frame)
 
-        # Display the annotated frame (optional)
-        cv2.imshow("Detecting and Tracking License Plates", frame)
+        # Display the annotated frame
+        cv2.imshow("YOLO Tracking", frame)
         
         # Break the loop if 'q' is pressed
         if cv2.waitKey(1) & 0xFF == ord("q"):
             break
 
-# Release the video capture and writer objects, and close display windows
+# Release resources
+out.release()  # Release the VideoWriter object
 cap.release()
-out.release()  # Save the video file
 cv2.destroyAllWindows()
