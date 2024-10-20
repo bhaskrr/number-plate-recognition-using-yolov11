@@ -9,8 +9,7 @@
 
 ## Demo
 
-<!-- ![Demo video]("./data/output/annotated_traffic.mp4") -->
-<iframe width="640" height="384" src="https://github.com/bhaskrr/number-plate-recognition-using-yolov11/blob/main/data/output/annotated_traffic.mp4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+https://github.com/bhaskrr/number-plate-recognition-using-yolov11/blob/main/data/output/annotated_traffic.mp4
 
 
 ## Data
